@@ -25,8 +25,9 @@ And the user clicks the login button
 Then the user is authenticated
 And the user is on the account page
 
-# as a customer I can create a new account if I enter my username/password and click the register button, I will be send to the account page
-Scenario: As a customer I can create a new account
+# extra starting whitespaces are accepted
+        # as a customer I can create a new account if I enter my username/password and click the register button, I will be send to the account page
+    Scenario: As a customer I can create a new account
 Given I am on the register screen
 When I enter my username
 And I enter my password
