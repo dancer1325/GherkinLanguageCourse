@@ -1,4 +1,4 @@
-# Several Scenario can be added per Feature (=== file)
+# Feature: NameOfTheFeatureKeyword === Epic in Agile process / single feature / single website
 Feature: As a customer I should be able to edit the contents of my shopping basket, change quantities and then checkout
 
 # Several Scenario can be added per Feature (=== file)

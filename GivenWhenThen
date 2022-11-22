@@ -1,5 +1,7 @@
+# Feature: NameOfTheFeatureKeyword === Epic in Agile process / single feature / single website
 Feature: As a customer I should be able to edit the contents of my shopping basket, change quantities and then checkout
 
+# Several Scenario can be added per Feature (=== file)
 Scenario: As a customer I can add an item to my shopping basket
 Given I am on the product detail page
 When I click the Add to Basket button
