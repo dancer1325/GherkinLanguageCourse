@@ -1,0 +1,12 @@
+# Feature: NameOfTheFeatureKeyword === Epic in Agile process / single feature / single website
+# Not allowed several Feature per file
+Feature: As a customer I should be able to edit the contents of my shopping basket, change quantities and then checkout
+
+# Several Scenario can be added per Feature (=== file)
+Scenario: As a customer I can add an item to my shopping basket
+
+Scenario: As a customer I can remove an item from my shopping basket
+
+Scenario: As a customer I can view the items of my shopping basket
+
+Scenario: As a customer I can checkout from the shopping basket
