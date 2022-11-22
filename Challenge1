@@ -32,11 +32,22 @@ And I click the register button
 Then I am sent to the account screen
 
 # product is not in stock and not in the basket
-Scenario: As a customer I am unable to add an item to my shopping basket if not in stock
+# Scenario information can be added in multilines
+Scenario: As a customer I am unable to add an item to my shopping basket
+if not in stock
+# Given information is just possible to be added in 1 !line
+# Given I am on the product detail
+# page
 Given I am on the product detail page
 And the product is not in stock
 And this product is currently not in the basket
+# When information is just possible to be added in 1 !line
+# When I click the Add to Basket
+# button
 When I click the Add to Basket button
+# Then information is just possible to be added in 1 !line
+# Then a message is displayed to the
+# user
 Then a message is displayed to the user
 And the product is not added to the basket
 And the stock level is unchanged
@@ -65,3 +76,4 @@ Scenario: As a customer I can checkout from the shopping basket
 Given I am on the basket page
 When I click the checkout button
 Then I should be taken to the checkout page
+
