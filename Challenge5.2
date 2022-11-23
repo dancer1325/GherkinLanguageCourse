@@ -1,0 +1,35 @@
+Feature: Fix my Gherkin
+
+# Scenario to improve
+Scenario: As author record is active, I want to update it
+Given I have an author record with field firstname set to bob
+And surname with value jones
+And the author record is active
+When I click Save button
+Then The record is updated
+
+# Scenario improved -- Option 1 --
+# 1. Capitalize first letter of each row
+# 2. Wrap with "" the fields and field's value, since it could be afterwards arguments to parameterize
+# 3. Wording in first Given, which is giving 2 type of information
+# 4. Wording in next Given, to have the same structure
+# 5. Generalize the scenario for any kind of users(author, ...)
+Scenario: As author record is active, I want to update it
+Given I have an "author" record
+And The field "firstname" has a value of "bob"
+And The field "surname" has a  value of "jones"
+And The field "active" has a value of "true"
+When I click Save button
+Then The record is updated
+
+# Scenario improved -- Option 2 --
+# 6. Generalize the fields, adding a table
+Scenario: As author record is active, I want to update it
+Given I have an "author" record
+And The field <Field> has a value of <Value>
+| Field     | Value |
+| firstname | bob   |
+| surname   | jones |
+| active    | true  |
+When I click Save button
+Then The record is updated
