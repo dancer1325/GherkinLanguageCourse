@@ -1,0 +1,32 @@
+Feature: Fixed my Gherkin
+
+# Scenario improved
+# 1. 'http://myapp/login', 'xpath=//div/section >> nth(2)/section/div[3]' and 'xpath=//div/section >> nth(2)/section/div[3]/[i]' are implementation details
+# the person who writes tests, is not interested in browser navigation --> rename and cucumber will handle the mapping
+
+Scenario: Username not provided
+Given I navigate to the page 'login'
+And I click on the element 'username'
+When I click element 'login'
+Then a message is displayed 'user name must be specified'
+
+# 2. Given statement is modified as When
+Scenario: Username provided
+Given I navigate to the page 'login'
+And I click on the element 'username'
+When I type my username of 'myusername'
+And I click element 'login'
+Then no message is displayed
+
+Scenario: Password not provided
+Given I navigate to the page 'login'
+And I click on the element 'password'
+When I click element 'login'
+Then a message is displayed 'password must be specified'
+
+Scenario: Password provided
+Given I navigate to the page 'login'
+And I click on the element 'password'
+When I type my password of 'mypassword'
+And I click element 'login'
+Then no message is displayed
