@@ -1,0 +1,30 @@
+Feature: Fix my Gherkin
+
+# Scenario to improve
+Scenario: As a customer service agent, I want to update first name field
+Given I am logged in as a customer service agent
+Given I am on the author record detail page
+Given The record is in edit mode
+Given I change the first name field to 'test1'
+When I click Save button
+Then The record is updated
+
+# Scenario improved
+# Replace multiple Given --> And
+Scenario: As a customer service agent, I want to update first name field
+Given I am logged in as a customer service agent
+And I am on the author record detail page
+And The record is in edit mode
+And I change the first name field to 'test1'
+When I click Save button
+Then The record is updated
+
+# Scenario improved
+# Replace multiple Given --> *
+Scenario: As a customer service agent, I want to update first name field
+Given I am logged in as a customer service agent
+* I am on the author record detail page
+* The record is in edit mode
+* I change the first name field to 'test1'
+When I click Save button
+Then The record is updated
