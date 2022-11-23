@@ -1,0 +1,32 @@
+Feature: Fix my Gherkin
+
+# Scenario to improve
+Scenario: Challenge 5.3
+Given I am requesting an boat insurance quote
+When I click on 'Dinghy'
+Then I should see the following fields
+| Field     |
+| Make |
+| Model   |
+| Manufactured Date    |
+| Hull Length |
+
+When I click on 'Yacht'
+Then I should see the following fields
+| Field     |
+| Make |
+| Model   |
+| Manufactured Date    |
+| Hull Length |
+| Berths |
+
+When I click on 'Cruiser'
+Then I should see the following fields
+| Field     |
+| Make |
+| Model   |
+| Manufactured Date    |
+| Hull Length |
+| Engine Size |
+| Fuel Type |
+| Berths |
